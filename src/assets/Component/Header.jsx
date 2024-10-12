@@ -182,7 +182,9 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
                     >
                         {isDarkMode ? <MdWbSunny className="text-yellow-500 size-5" /> : <MdNightlight className="text-gray-700 size-5" />}
                     </button>
-                    <ResumeDownload />
+                    <div className="hidden md:block">
+                        <ResumeDownload />
+                    </div>
                 </div>
             </div>
         </header>

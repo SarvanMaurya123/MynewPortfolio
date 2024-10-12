@@ -46,25 +46,25 @@ const Home = () => {
                 <h2 className="py-6 px-6 text-center dark:text-white text-2xl bg-gray-100 dark:bg-gray-800">
                     Skills
                 </h2>
-                <div className="flex justify-center gap-6 mt-4">
+                <div className="flex justify-center flex-col md:flex-row gap-6 mt-4">
                     <div className="flex flex-col items-center">
-                        <FaReact className="text-4xl text-blue-600 md:size-28" />
+                        <FaReact className="text-4xl text-blue-600 size-20 md:size-28" />
                         <span className="mt-2 dark:text-white">React.js</span>
                     </div>
                     <div className="flex flex-col items-center">
-                        <SiExpress className="text-4xl text-gray-600 md:size-28" />
+                        <SiExpress className="text-4xl text-gray-600 size-20 md:size-28" />
                         <span className="mt-2 dark:text-white">Express.js</span>
                     </div>
                     <div className="flex flex-col items-center">
-                        <SiNodedotjs className="text-4xl text-green-600 md:size-28" />
+                        <SiNodedotjs className="text-4xl text-green-600 size-20 md:size-28" />
                         <span className="mt-2 dark:text-white">Node.js</span>
                     </div>
                     <div className="flex flex-col items-center">
-                        <SiTailwindcss className="text-4xl text-cyan-400 md:size-28" />
+                        <SiTailwindcss className="text-4xl text-cyan-400 size-20 md:size-28" />
                         <span className="mt-2 dark:text-white">Tailwind CSS</span>
                     </div>
                     <div className="flex flex-col items-center">
-                        <SiMongodb className="text-4xl text-green-700 md:size-28" />
+                        <SiMongodb className="text-4xl text-green-700 size-20 md:size-28" />
                         <span className="mt-2 dark:text-white">MongoDB</span>
                     </div>
                 </div>
