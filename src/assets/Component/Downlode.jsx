@@ -2,7 +2,7 @@ import { MdDownload } from 'react-icons/md';
 
 const ResumeDownload = () => {
     return (
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 md:block hidden">
             <a
                 href="../Path/SarvanMauryaresume.pdf"
                 download="SarvanMauryaresume.pdf"
