@@ -4,7 +4,7 @@ const Design4 = () => {
     return (
         <>
             <section className="relative">
-                <img src="../design/data.jpg" className="w-full object-cover h-[1500px] md:h-auto" />
+                <img src="../design/data.jpg" className="w-full object-cover h-[2000px] md:h-auto" />
                 <div className="absolute top-16 md:top-32 left-6 right-6 md:left-32 md:right-20">
                     <div className="flex flex-col md:flex-row">
                         <div className="md:w-1/2 w-full flex flex-col justify-center md:justify-around">
@@ -18,8 +18,8 @@ const Design4 = () => {
                             </button>
 
                         </div>
-                        <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-[20px] md:rounded-[40px] py-8 md:py-16 border-[1px] border-white px-6 md:px-20 shadow-lg text-white mt-12 md:mt-0 md:ml-16 relative">
-                            <img src="../design/dataflower.png" className="absolute md:-top-24 md:left-2 w-72 md:w-[500px] left-32 top-2" />
+                        <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-[20px] md:rounded-[40px] py-8 md:py-16 border-[1px] border-white px-6 md:px-20 shadow-lg text-white mt-12 md:mt-0 md:h-auto h-[500px] md:ml-16 relative">
+                            <img src="../design/dataflower.png" className="absolute md:-top-24 md:left-2 w-72 md:w-[500px] left-10 top-60" />
                             <p className="md:mt-24 mt-14 md:mt-32 text-left mb-2 text-sm md:text-base">Trendy House Plant</p>
                             <p className="text-left text-xl md:text-2xl">Calathea plant</p>
                             <button
@@ -31,10 +31,10 @@ const Design4 = () => {
                         </div>
 
                     </div>
-                    <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-[20px] md:rounded-[40px] py-8 md:py-16 border-[1px] border-white px-6 md:px-10 shadow-lg text-white mt-12 md:mt-20 md:ml-0 relative">
+                    <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-[20px] md:rounded-[40px] py-8 md:py-16 border-[1px] border-white px-6 md:px-10 shadow-lg text-white mt-12 md:mt-20 md:ml-0 md:h-auto h-[500px] relative">
                         <div className="flex md:w-1/2 w-full justify-center items-center flex-row-reverse">
                             <div className="absolute right-0">
-                                <img src="../design/dataflower2.png" className="md:left-2 w-72 md:w-[500px] left-32 md:top-2 mt-32 md:mt-0" />
+                                <img src="../design/dataflower2.png" className="md:left-2 w-72 md:w-[500px] md:top-2 mt-96 md:mt-0" />
                             </div>
                             <div className="">
                                 <p className="md:mt-24 mt-0 md:mt-32 t mb-2 text-2xl">For Small Desk Ai Plant</p>
@@ -42,17 +42,17 @@ const Design4 = () => {
                                 <p className="text-sm md:text-2xl mb-11 mt-1">Rs. 599/-</p>
                                 <button
                                     type="submit"
-                                    className="w-auto border-[1px] px-6 md:px-10 mb-20 md:mb-0 mt-6 md:mt-10 py-2 hover:bg-gray-100 transition duration-300 border-gray-300 text-white dark:hover:text-black hover:text-black dark:text-white"
+                                    className="w-auto border-[1px] px-6 md:px-10 mb-20 md:mb-0 mt-2 md:mt-10 py-2 hover:bg-gray-100 transition duration-300 border-gray-300 text-white dark:hover:text-black hover:text-black dark:text-white"
                                 >
                                     Shop Now →
                                 </button>
                             </div>
                         </div>
                     </div>
-                    <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-[20px] md:rounded-[40px] py-8 md:py-16 border-[1px] border-white px-6 md:px-10 shadow-lg text-white mt-12 md:mt-20 md:ml-0 relative">
+                    <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-[20px] md:rounded-[40px] py-8 md:py-16 border-[1px] border-white px-6 md:px-10 shadow-lg text-white mt-12 md:mt-20 md:ml-0 relative md:h-auto h-[500px] ">
                         <div className="flex md:w-1/2 w-full justify-center items-center flex-row-reverse">
                             <div className="absolute right-0">
-                                <img src="../design/dataflower3.png" className="md:left-2 w-72 md:w-[500px] left-32 md:top-2 mt-32 md:mt-0" />
+                                <img src="../design/dataflower3.png" className="md:left-2 w-72 md:w-[500px] ml-0 md:top-2 mt-96 md:mt-0" />
                             </div>
                             <div className="">
                                 <p className="md:mt-24 mt-0 md:mt-32 t mb-2 text-2xl">For Fresh Decs Ai Plat</p>
