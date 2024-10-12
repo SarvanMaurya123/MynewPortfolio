@@ -5,10 +5,10 @@ import Header from './Header';
 import Footer from './Footer';
 import Home from './Pages';
 import About from './Pages/About';
-import Works from '../../WorksPages/design1';
-import Works2 from '../../WorksPages/Design2';
-import Works3 from '../../WorksPages/Design3';
-import Works4 from '../../WorksPages/Design4';
+import Works from '../Component/Pages/Works/Design1';
+import Works2 from '../Component/Pages/Works/Design2';
+import Works3 from '../Component/Pages/Works/Design3';
+import Works4 from '../Component/Pages/Works/Design4';
 
 
 function Routesdata() {

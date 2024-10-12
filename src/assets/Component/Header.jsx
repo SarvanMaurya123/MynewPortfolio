@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import { MdMenu, MdClose, MdWbSunny, MdNightlight, MdKeyboardArrowDown } from "react-icons/md"; // Import the new icon
-import { FaBriefcase } from "react-icons/fa"; // Import work icon
+import { MdMenu, MdClose, MdWbSunny, MdNightlight, MdKeyboardArrowDown } from "react-icons/md"; // 
+import { FaBriefcase } from "react-icons/fa";
 import PropTypes from 'prop-types';
 import ResumeDownload from "./Downlode";
 
