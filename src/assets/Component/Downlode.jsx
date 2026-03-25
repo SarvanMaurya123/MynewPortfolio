@@ -1,18 +1,23 @@
 import { MdDownload } from 'react-icons/md';
+import PropTypes from 'prop-types';
 
-const ResumeDownload = () => {
+const ResumeDownload = ({ compact = false }) => {
     return (
         <div className="flex items-center gap-4">
             <a
-                href="../Path/SarvanMauryaresume.pdf"
-                download="SarvanMauryaresume.pdf"
-                className="py-2 px-4 border border-gray-300 text-black rounded flex items-center gap-2 hover:bg-gray-200 dark:text-black hover:dark:text-black transition duration-300"
+                href="../Path/Sarvan_Maurya_Resume.pdf"
+                download="Sarvan_Maurya_Resume.pdf"
+                className={`glass-button ${compact ? 'w-full justify-center' : ''}`}
             >
                 <MdDownload className="text-lg" />
-                Download CV
+                Download Resume
             </a>
         </div>
     );
+};
+
+ResumeDownload.propTypes = {
+    compact: PropTypes.bool,
 };
 
 export default ResumeDownload;

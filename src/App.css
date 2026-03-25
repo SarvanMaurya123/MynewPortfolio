@@ -7,22 +7,183 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Josefin Sans;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-/* App.css */
+html {
+  scroll-behavior: smooth;
+}
 
-/* Example for your global styles */
 body {
-  background-color: white;
-  /* Default light mode */
-  transition: background-color 0.3s;
+  min-height: 100vh;
+  background:
+    radial-gradient(900px 500px at 5% 0%, rgba(13, 148, 136, 0.28), transparent 70%),
+    radial-gradient(800px 500px at 90% 10%, rgba(14, 116, 144, 0.3), transparent 70%),
+    linear-gradient(155deg, #060b14 0%, #0c1526 45%, #111f35 100%);
+  color: #f8fafc;
 }
 
-.dark body {
-  background-color: #1a202c;
-  /* Dark mode background color */
+.cursor-aura {
+  --cursor-x: 50%;
+  --cursor-y: 30%;
+  position: relative;
 }
 
+.cursor-aura::before {
+  content: '';
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(340px circle at var(--cursor-x) var(--cursor-y),
+      rgba(56, 189, 248, 0.18),
+      rgba(34, 211, 238, 0.08) 35%,
+      transparent 72%);
+  transition: background-position 0.16s ease;
+}
 
-/* You can also add other styles for other components here */
+main>section,
+.glass-nav,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+.glass-nav {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(15, 23, 42, 0.62);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(16px);
+}
+
+.glass-panel {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(150deg, rgba(15, 23, 42, 0.55), rgba(30, 41, 59, 0.45));
+  box-shadow: 0 18px 35px rgba(2, 6, 23, 0.35);
+  backdrop-filter: blur(20px);
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+}
+
+.glass-panel:hover {
+  transform: translateY(-3px);
+  border-color: rgba(125, 211, 252, 0.35);
+  box-shadow: 0 24px 40px rgba(2, 6, 23, 0.38);
+}
+
+.sub-glass {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.56), rgba(30, 41, 59, 0.28));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.tag {
+  border: 1px solid rgba(125, 211, 252, 0.35);
+  color: rgba(186, 230, 253, 0.92);
+  background: rgba(14, 116, 144, 0.2);
+}
+
+.nav-link {
+  color: rgba(241, 245, 249, 0.9);
+  font-weight: 500;
+  transition: color 0.22s ease;
+}
+
+.nav-link:hover {
+  color: #7dd3fc;
+}
+
+.section-title {
+  font-size: 1.65rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  background: rgba(15, 23, 42, 0.45);
+}
+
+.list-item {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.list-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.45rem;
+  height: 0.45rem;
+  width: 0.45rem;
+  border-radius: 999px;
+  background: linear-gradient(145deg, #7dd3fc, #22d3ee);
+}
+
+.glass-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.8rem;
+  border: 1px solid rgba(125, 211, 252, 0.4);
+  background: linear-gradient(120deg, rgba(14, 116, 144, 0.35), rgba(6, 182, 212, 0.2));
+  color: #f8fafc;
+  padding: 0.65rem 1rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.glass-button:hover {
+  transform: translateY(-2px);
+  border-color: rgba(186, 230, 253, 0.65);
+  background: linear-gradient(120deg, rgba(14, 116, 144, 0.46), rgba(6, 182, 212, 0.28));
+}
+
+.skill-chip {
+  border: 1px solid rgba(148, 163, 184, 0.38);
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.56);
+  color: rgba(241, 245, 249, 0.92);
+  font-size: 0.84rem;
+  padding: 0.4rem 0.75rem;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(15, 23, 42, 0.46);
+  padding: 0.45rem 0.75rem;
+  transition: border-color 0.2s ease;
+}
+
+.footer-link:hover {
+  border-color: rgba(125, 211, 252, 0.52);
+}
+
+.reveal-up {
+  animation: reveal-up 560ms ease both;
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -8,7 +8,9 @@ export default {
 
   theme: {
     extend: {
-      'custom-left': '10px 10px 15px black',
+      boxShadow: {
+        'glass-soft': '0 12px 30px rgba(0, 0, 0, 0.25)',
+      },
     },
   },
   plugins: [],
