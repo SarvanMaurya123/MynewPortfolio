@@ -141,13 +141,28 @@ const Design1 = () => {
 
         {/* Trusted By Section */}
         <section className="mx-auto px-6 lg:px-20 py-20 bg-slate-900">
-            <p className="text-center text-gray-400 text-lg mb-12">Trusted by industry leaders</p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center opacity-70 hover:opacity-100 transition-opacity">
-                {[1, 2, 3, 4, 5].map(i => (
-                    <div key={i} className="p-4 hover:scale-110 transition-transform">
-                        <img src={`../${i}.png`} alt={`Partner ${i}`} className="h-12 object-contain" />
+
+            {/* Heading */}
+            <p className="text-center text-gray-400 text-lg mb-12 tracking-wide">
+                Trusted by industry leaders
+            </p>
+
+            {/* Logos Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center">
+
+                {[1, 2, 3, 4, 5].map((i) => (
+                    <div
+                        key={i}
+                        className="p-4 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-pink-500/20 rounded-xl"
+                    >
+                        <img
+                            src={`/${i}.png`}   // ✅ correct for Vite (public folder)
+                            alt={`Partner ${i}`}
+                            className="h-12 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                        />
                     </div>
                 ))}
+
             </div>
         </section>
 
@@ -160,11 +175,11 @@ const Design1 = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
                 {features.map((feature, idx) => (
-                    <div key={idx} className="group p-8 rounded-2xl bg-white dark:bg-slate-800/50 border border-gray-200 dark:border-gray-700 hover:border-pink-400 hover:shadow-xl transition-all hover:scale-[1.02]">
+                    <div key={idx} className="group p-8 rounded-2xl bg-white dark:bg-slate-800/50 border border-gray-200 dark:border-gray-700 hover:border-pink-400 hover:shadow-xl transition-all hover:scale-[1.02] text-white ">
                         <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-pink-500 to-blue-500 flex items-center justify-center mb-4 group-hover:scale-125 transition-transform">
                             <feature.icon className="text-white text-xl" />
                         </div>
-                        <h3 className="text-xl font-bold dark:text-white mb-2">{feature.title}</h3>
+                        <h3 className="text-xl font-bold dark:text-white mb-2 text-black">{feature.title}</h3>
                         <p className="text-gray-600 dark:text-gray-400">{feature.desc}</p>
                     </div>
                 ))}
@@ -198,10 +213,10 @@ const Design1 = () => {
 
         {/* Integration Section */}
         <section className="mx-auto px-6 lg:px-20 py-20 bg-slate-50 dark:bg-slate-800">
-            <h2 className="text-4xl font-bold dark:text-white text-center mb-16">Works with Your Favorite Tools</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 mb-12">
+            <h2 className="text-4xl font-bold dark:text-white text-center mb-16 text-black dark:text-white">Works with Your Favorite Tools</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 mb-12 text-black dark:text-white">
                 {['Google', 'Slack', 'Jira', 'Figma', 'Notion'].map((tool, idx) => (
-                    <div key={idx} className="p-6 rounded-xl bg-white dark:bg-slate-700 border border-gray-200 dark:border-gray-600 text-center hover:shadow-lg hover:scale-105 transition-all cursor-pointer">
+                    <div key={idx} className="p-6 rounded-xl text-black dark:bg-slate-700 border border-gray-200 dark:border-gray-600 text-center hover:shadow-lg hover:scale-105 transition-all cursor-pointer">
                         <p className="font-semibold dark:text-white">{tool}</p>
                     </div>
                 ))}
@@ -210,11 +225,11 @@ const Design1 = () => {
 
         {/* FAQ Section */}
         <section className="mx-auto px-6 lg:px-20 py-20">
-            <h2 className="text-4xl font-bold dark:text-white text-center mb-16">Frequently Asked Questions</h2>
+            <h2 className="text-4xl font-bold dark:text-white text-center mb-16 text-white dark:text-white">Frequently Asked Questions</h2>
 
             <div className="max-w-2xl mx-auto space-y-4">
                 {faqs.map((faq, idx) => (
-                    <div key={idx} className="border border-gray-300 dark:border-gray-600 rounded-xl overflow-hidden hover:border-pink-400 transition-colors">
+                    <div key={idx} className="border border-gray-300 dark:border-gray-600 rounded-xl overflow-hidden hover:border-pink-400 transition-colors text-black dark:text-white">
                         <button
                             onClick={() => setActiveAccordion(activeAccordion === idx ? null : idx)}
                             className="w-full p-6 flex justify-between items-center bg-white dark:bg-slate-800 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
